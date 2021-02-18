@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/currencies.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/main.css">
+  <script src="assets/app.js" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" rel="stylesheet">  
+  <title>Currency converter</title>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>Currency Converter</h1>
+    </div>
+    <div class="input">
+      <h3>Convert from:</h3>
+      <form id="from">
+        <input type="radio" name="from" value="GBP">
+        <label for="GBP">GBP</label>
+        <input type="radio"name="from" value="USD">
+        <label for="USD">USD</label>
+        <input type="radio" id="EUR" name="from" value="EUR">
+        <label for="EUR">EUR</label>
+      </form>
+      <form action="">
+        <h3>Amount:</h3>
+      <input type="text" id="input">
+      </form>
+      <h3>Convert to:</h3>
+      <form id="to">
+        <input type="radio" name="to" value="GBP">
+        <label for="GBP">GBP</label>
+        <input type="radio"name="to" value="USD">
+        <label for="USD">USD</label>
+        <input type="radio" id="EUR" name="to" value="EUR">
+        <label for="EUR">EUR</label>
+      </form>
+      <h3><span id="reset">Reset</span></h3>
+      <h3><span id="btn">Convert</span></h3>
+    </div>
+    <div class="output">
+      <h3 id="result"></h3>
+    </div>
+  </div>
+</body>
+</html>
