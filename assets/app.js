@@ -18,11 +18,19 @@ console.log(reset);
 function convert(event) {
   event.preventDefault();
   let value = input.value;
-  let basecurrency = document.querySelector('input[name="from"]:checked').value;
-  let desiredcurrency = document.querySelector('input[name="to"]:checked').value;
+  let basecurrency = document.querySelector('input[name="from"]:checked')?.value;
+  let desiredcurrency = document.querySelector('input[name="to"]:checked')?.value;
   let convertedAmount = 0;
-  convertedAmount = value * currency[basecurrency][desiredcurrency];
-  if (value === '' || isNaN(value) || basecurrency.value === null || desiredcurrency.value === null) {
+  if (basecurrency == undefined || desiredcurrency == undefined || 
+    basecurrency === '' || desiredcurrency === '') {
+    result.innerText = 'Please select currencies';
+    reset.style.display = 'grid';
+    btn.style.display = 'none';
+    return;
+  } else {
+    convertedAmount = value * currency[basecurrency][desiredcurrency];
+  }
+  if (value === '' || isNaN(value)) {
     result.innerText = 'Please enter a valid number';
     reset.style.display = 'grid';
     btn.style.display = 'none';
